@@ -9,7 +9,7 @@ import { UsersService } from '../services/users/users.service';
 })
 export class UsersComponent implements OnInit {
   // data table , dttrigger will be called as a callback function after res in getUsers. Wait the data loaded then trigger the data table
-  // dtConfig : deals with table option such as number of row option i.e [5, 10, 15] 
+  // dtConfig : deals with table option such as number of row option i.e [5, 10, 15] and another configuration and settings about the table
   dtConfig : DataTables.Settings = { lengthMenu : [5, 10, 15]};
   dtTrigger : Subject <any> = new Subject<any>();
   // data table end
