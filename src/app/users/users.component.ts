@@ -8,7 +8,8 @@ import { UsersService } from '../services/users/users.service';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-  // data table config
+  // data table config , dttrigger will be called as a callback function after res in getUsers. Wait the data loaded then trigger the data table
+  // dtConfig : deals with table option such as number of row option i.e [5, 10, 15] 
   dtConfig : DataTables.Settings = { lengthMenu : [5, 10, 15]};
   dtTrigger : Subject <any> = new Subject<any>();
   // data table config end
@@ -21,6 +22,7 @@ export class UsersComponent implements OnInit {
 
   ngOnInit(): void {
   this.getUsers()
+
   }
 
   ngOnDestroy(): void {
